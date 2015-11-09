@@ -16,4 +16,4 @@ deploy:
   on:
     repo: mjhea0/guest-speaker-app
     branch: master
-    node: '0.12'
+    node: '4.1'
