@@ -7,7 +7,7 @@ node_js:
 - '0.11'
 before_script:
 - npm install -g mocha
-script: mocha
+script: mocha --recursive
 deploy:
   provider: heroku
   api_key:

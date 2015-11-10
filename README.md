@@ -13,6 +13,7 @@ An app to allow students to rate and provide feedback on a guest speaker.
 1. Part 2
   - User Stories
   - Code Coverage
+  - Sequelize / Migrations
   - Authentication
 1. Part 3
   - Add Feature One (via TDD)
@@ -23,12 +24,21 @@ An app to allow students to rate and provide feedback on a guest speaker.
 
 ## User Stories
 
-1. As a user-
-  - Story 1
-  - Story 2
-1. As an admin-
-  - Story 1
-  - Story 1
+1. A user can-
+  - view past speakers
+  - view upcoming speakers
+  - add feedback on on past speakers
+  - vote on *potential* upcoming topics
+  - login/logout via Github
+  - suggest speakers
+  - suggest topics
+1. A admin can-
+  - approve/reject users wanting to login
+  - CRUD students
+  - CRUD speakers
+  - CRUD topics
+  - login/logout via Github
+  - toggle suggestion features
 
 ## Stack
 
