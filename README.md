@@ -9,10 +9,10 @@ An app to allow students to rate and provide feedback on a guest speaker.
 1. Part 1
   - App overview
   - Setup (Generator, Github, Travis CI, Heroku)
-  - Add User Stories
   - Add Unit Tests
-  - Add Code Coverage
 1. Part 2
+  - User Stories
+  - Code Coverage
   - Authentication
 1. Part 3
   - Add Feature One (via TDD)
