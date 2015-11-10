@@ -8,6 +8,8 @@ node_js:
 before_script:
 - npm install -g mocha
 script: npm run cov
+after_script:
+- npm run send-coverage
 deploy:
   provider: heroku
   api_key:

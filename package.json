@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node ./src/server/bin/www",
     "test": "mocha --recursive",
-    "cov": "istanbul cover _mocha -- --recursive -R spec"
+    "cov": "istanbul cover _mocha -- --recursive -R spec",
+    "send-coverage": "npm run cov -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
   },
   "dependencies": {
     "body-parser": "~1.13.2",

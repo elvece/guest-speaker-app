@@ -4,6 +4,8 @@ An app to allow students to rate and provide feedback on a guest speaker.
 
 [![Build Status](https://travis-ci.org/mjhea0/guest-speaker-app.svg?branch=master)](https://travis-ci.org/mjhea0/guest-speaker-app)
 
+[![Coverage Status](https://coveralls.io/repos/mjhea0/guest-speaker-app/badge.svg?branch=master&service=github)](https://coveralls.io/github/mjhea0/guest-speaker-app?branch=master)
+
 ## Schedule
 
 1. Part 1
