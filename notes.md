@@ -4,7 +4,7 @@ get Postgress app running on your machine
 
 
 ## install sequelize
-npm install sequelize sequelize-cli pg --save
+npm install sequelize sequelize-cli pg pg-hstore --save
 
 ### DB setup
 
@@ -116,7 +116,7 @@ $ psql guest_app
 # \d "Users"
 ```
 
-look at all the fields and their types, look right? If not, no worries, as long as a table showed up, you ae on the right track. We can tweak the tables schema's later 
+look at all the fields and their types, do they look right? If not, no worries, as long as a table showed up, you are on the right track. We can tweak the tables schema's later 
 
 ok cool, development DB and test DB set up |√| 
 
