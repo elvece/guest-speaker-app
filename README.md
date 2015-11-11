@@ -16,6 +16,7 @@ An app to allow students to rate and provide feedback on a guest speaker.
   - User Stories
   - Code Coverage - istanbul, coveralls
 1. Part 3
+  - Data Modeling
   - Sequelize / Migrations
   - Authentication
 1. Part 4
