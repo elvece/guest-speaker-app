@@ -17,12 +17,21 @@ An app to allow students to rate and provide feedback on a guest speaker.
   - Code Coverage - istanbul, coveralls
 1. Part 3
   - Data Modeling
+    - user schema
   - Sequelize / Migrations
-  - Authentication
+    - migrate up / migrate down
 1. Part 4
-  - Add Feature Two (via TDD)
+  - Data Modeling
+    - speaker schema
+  - Database
+    - local
+    - travis
+    - heroku
+  - Authentication
+    - passport-github?
+    - roll our own?
 1. Part 5
-  - Add Feature Three (via TDD)
+  - Add Feature One (via TDD)
 
 ## User Stories
 
