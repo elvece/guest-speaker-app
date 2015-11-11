@@ -14,11 +14,10 @@ An app to allow students to rate and provide feedback on a guest speaker.
   - Add Unit Tests
 1. Part 2
   - User Stories
-  - Code Coverage
+  - Code Coverage - istanbul, coveralls
+1. Part 3
   - Sequelize / Migrations
   - Authentication
-1. Part 3
-  - Add Feature One (via TDD)
 1. Part 4
   - Add Feature Two (via TDD)
 1. Part 5
