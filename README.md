@@ -27,11 +27,10 @@ An app to allow students to rate and provide feedback on a guest speaker.
     - local
     - travis
     - heroku
+1. Part 5
   - Authentication
     - passport-github?
     - roll our own?
-1. Part 5
-  - Add Feature One (via TDD)
 
 ## User Stories
 
