@@ -77,3 +77,15 @@ With code coverage:
 ```sh
 $ npm run cov
 ```
+
+## Postgres Heroku Setup
+
+1. Create database on Heroku: `heroku addons:create heroku-postgresql:hobby-dev`
+1. Update `production` config in */src/server/config.json*
+1. Commit, PUSH, etc.
+1. Run Migrations on Heroku:
+
+  ```sh
+  $ heroku run bash
+  $ node_modules/.bin/sequelize db:migrate
+  ```
