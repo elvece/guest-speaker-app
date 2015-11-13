@@ -90,3 +90,15 @@ $ npm run cov
   $ heroku run bash
   $ node_modules/.bin/sequelize db:migrate
   ```
+
+## Auth
+
+Add an *_env.sh* to the root:
+
+```sh
+#!/bin/sh
+
+export githubClientID=ADD_YOUR_ID
+export githubClientSecret=ADD_YOUR_SECRET
+export githubCallbackURL=http://127.0.0.1:3000/auth/github/callback
+```

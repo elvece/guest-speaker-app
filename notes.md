@@ -1,4 +1,4 @@
-## Setup Postgres with Sequelize
+## Setup Postgres with Sequelize (by Pete)
 
 get Postgress app running on your machine
 
@@ -34,7 +34,7 @@ dang!!! look at that sweet index.js file that squelize created, thanks to the bo
 
 get into the config.json file and update the "development" and the "test" options.
 
-we need to add our 
+we need to add our
 * username
 * database names (should be related to the project)
 * dialect
@@ -54,7 +54,7 @@ we need to add our
     "database": "guest_app_test",
     "host": "127.0.0.1",
     "dialect": "postgres"
-  },  
+  },
   "production": {
     "use_env_variable": "DATABASE_URL"
   }
@@ -63,7 +63,7 @@ we need to add our
 
 ### Create DB's
 
-in the command line run 
+in the command line run
 
 ```sh
 createdb guest_app
@@ -99,7 +99,7 @@ Update models and migrations folders with correct model info, validations and as
 
 ### Migrate!
 
-run 
+run
 
 ```sh
 node_modules/.bin/sequelize db:migrate
@@ -116,9 +116,9 @@ $ psql guest_app
 # \d "Users"
 ```
 
-look at all the fields and their types, do they look right? If not, no worries, as long as a table showed up, you are on the right track. We can tweak the tables schema's later 
+look at all the fields and their types, do they look right? If not, no worries, as long as a table showed up, you are on the right track. We can tweak the tables schema's later
 
-ok cool, development DB and test DB set up |√| 
+ok cool, development DB and test DB set up |√|
 
 ### how to setup for heroku and travis ci ???
 
@@ -130,15 +130,10 @@ node_modules/.bin/sequelize migration:create --name update-speaker
 ```
 update both the model file and the migration file
 
-run 
+run
 
 ```sh
 node_modules/.bin/sequelize db:migrate
 node_modules/.bin/sequelize db:migrate --env test
 
 ```
-
-
-
-
-
