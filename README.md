@@ -31,6 +31,8 @@ An app to allow students to rate and provide feedback on a guest speaker.
   - Authentication
     - passport-github?
     - roll our own?
+  - Testing
+  - Mocks
 
 ## User Stories
 
