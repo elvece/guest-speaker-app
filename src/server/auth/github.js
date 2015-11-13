@@ -5,9 +5,9 @@ var models = require('../models/index');
 
 
 passport.use(new GitHubStrategy({
-  clientID: process.env.githubClientID,
-  clientSecret: process.env.githubClientSecret,
-  callbackURL: process.env.githubCallbackURL
+  clientID: process.env.githubClientID || "blah",
+  clientSecret: process.env.githubClientSecret || "blah",
+  callbackURL: process.env.githubCallbackURL || "blah"
 },
 function(accessToken, refreshToken, profile, done) {
   models.User.create({
