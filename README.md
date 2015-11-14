@@ -28,11 +28,10 @@ An app to allow students to rate and provide feedback on a guest speaker.
     - travis
     - heroku
 1. Part 5
-  - Authentication
-    - passport-github?
-    - roll our own?
-  - Testing
-  - Mocks
+  - Authentication w/ passport-github
+1. Part 6
+  - Add unit/ integration tests
+  - Mocks - [passport-stub](https://github.com/gtramontina/passport-stub)
 
 ## User Stories
 
