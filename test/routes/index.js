@@ -14,7 +14,7 @@ describe('index routes', function() {
     .get('/')
     .end(function(err, res) {
       res.should.have.status(200);
-      res.text.should.have.string('<p>Welcome to ExpressJS</p>');
+      res.text.should.have.string('<p>Welcome');
       done();
     });
   });
