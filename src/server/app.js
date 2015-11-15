@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var swig = require('swig');
 var passport = require('passport');
 var session = require('express-session');
+var flash = require('connect-flash');
 
 
 // *** routes *** //
@@ -39,6 +40,7 @@ app.use(session({
   resave: true,
   saveUninitialized: true
 }));
+app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
 

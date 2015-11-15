@@ -1,3 +1,4 @@
+var flash = require('connect-flash');
 var express = require('express');
 var router = express.Router();
 
@@ -12,8 +13,11 @@ router.get('/auth/github',
   passport.authenticate('github', { scope: [ 'user:email' ] }));
 
 router.get('/auth/github/callback',
-  passport.authenticate('github', { failureRedirect: '/' }),
-  function(req, res) {
+  passport.authenticate('github', {
+    failureRedirect: '/',
+    failureFlash : true
+  }),
+  function(req, res, next) {
     res.json('success!');
   });
 
