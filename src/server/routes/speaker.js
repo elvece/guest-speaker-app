@@ -43,10 +43,7 @@ router.put('/speaker/:id', function(req, res, next) {
     }
   }).then(function(speaker) {
     if(speaker){
-      speaker.updateAttributes({
-        title: req.body.title,
-        complete: req.body.complete
-      }).then(function(speaker) {
+      speaker.updateAttributes(req.body).then(function(speaker) {
         res.send(speaker);
       });
     }
