@@ -13,27 +13,4 @@ router.get('/', function(req, res, next) {
   });
 });
 
-router.get('/auth/github',
-  passport.authenticate('github', {
-    scope: [ 'user:email' ]
-  })
-);
-
-router.get('/auth/github/callback',
-  passport.authenticate('github', {
-    failureRedirect: '/',
-    successFlash: 'Welcome!',
-    failureFlash: 'Something went wrong!'
-  }),
-  function(req, res, next) {
-    res.redirect('/');
-  }
-);
-
-router.get('/logout', function(req, res){
-  req.logout();
-  req.flash('info', 'Goodbye!' );
-  res.redirect('/');
-});
-
 module.exports = router;
