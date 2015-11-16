@@ -6,7 +6,7 @@ var passport = require('../auth/github.js');
 
 
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'home' });
+  res.render('index', { title: 'home', user: req.user });
 });
 
 router.get('/auth/github',
@@ -18,7 +18,12 @@ router.get('/auth/github/callback',
     failureFlash : true
   }),
   function(req, res, next) {
-    res.json('success!');
+    res.redirect('/');
   });
+
+router.get('/logout', function(req, res){
+  req.logout();
+  res.redirect('/');
+});
 
 module.exports = router;
