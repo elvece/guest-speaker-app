@@ -13,6 +13,7 @@ var flash = require('connect-flash');
 
 // *** routes *** //
 var routes = require('./routes/index.js');
+var speakerRoutes = require('./routes/speaker.js');
 
 
 // *** express instance *** //
@@ -53,6 +54,7 @@ app.use(passport.session());
 
 // *** main routes *** //
 app.use('/', routes);
+app.use('/api/v1/', speakerRoutes);
 
 
 // catch 404 and forward to error handler

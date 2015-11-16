@@ -7,8 +7,11 @@
     "dialect": "postgres"
   },
   "test": {
-    "dialect": "sqlite",
-    "storage": ":memory:"
+    "username": "",
+    "password": null,
+    "database": "guest_app_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
   },
   "production": {
     "host": "process.env.DATABASE_URL",
