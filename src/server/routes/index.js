@@ -6,7 +6,11 @@ var passport = require('../auth/github.js');
 
 
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'home', user: req.user });
+  res.render('index', {
+    title: 'home',
+    user: req.user,
+    messages: res.locals.sessionFlash
+  });
 });
 
 router.get('/auth/github',
@@ -15,7 +19,8 @@ router.get('/auth/github',
 router.get('/auth/github/callback',
   passport.authenticate('github', {
     failureRedirect: '/',
-    failureFlash : true
+    successFlash: 'Welcome!',
+    failureFlash: 'Something went wrong!'
   }),
   function(req, res, next) {
     res.redirect('/');
@@ -23,6 +28,7 @@ router.get('/auth/github/callback',
 
 router.get('/logout', function(req, res){
   req.logout();
+  req.flash('info', 'Goodbye!' );
   res.redirect('/');
 });
 

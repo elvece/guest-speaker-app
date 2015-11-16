@@ -41,6 +41,12 @@ app.use(session({
   saveUninitialized: true
 }));
 app.use(flash());
+// if flash message, add to response then delete it
+app.use(function(req, res, next){
+  res.locals.sessionFlash = req.session.flash;
+  delete req.session.flash;
+  next();
+});
 app.use(passport.initialize());
 app.use(passport.session());
 

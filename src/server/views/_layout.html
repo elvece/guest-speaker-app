@@ -25,13 +25,28 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <!-- <ul class="nav navbar-nav"></ul> -->
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="/auth/github">Login</a></li>
+            {% if user %}
+              <li><a href="/logout">Logout</a></li>
+            {% else %}
+              <li><a href="/auth/github">Login</a></li>
+            {% endif %}
           </ul>
         </div>
         <!-- /.navbar-collapse -->
       </div>
       <!-- /.container -->
     </nav>
+
+    {% if messages %}
+      {% for message in messages %}
+        <div class="container">
+          <div class="alert alert-{{loop.key}} alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            {{ message }}
+          </div>
+        </div>
+      {% endfor %}
+    {% endif %}
 
     <div class="container">
       {% block content %}

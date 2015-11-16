@@ -14,18 +14,18 @@ function(accessToken, refreshToken, profile, done) {
     where: {email: profile._json.email}
   }).then(function(user) {
     if (user) {
-      return done(null, user, {message: 'Thanks for logging in!'});
+      return done(null, user);
     } else {
       models.User.create({
         email: profile._json.email
       }).then(function(user) {
-        return done(null, user, {message: 'Thanks for logging in!'});
+        return done(null, user);
       }).catch(function (err) {
-        return done(err, {message: 'Something went wrong!'});
+        return done(err);
       });
     }
   }).catch(function (err) {
-    return done(err, {message: 'Something went wrong!'});
+    return done(err);
   });
 }));
 
@@ -33,9 +33,9 @@ function(accessToken, refreshToken, profile, done) {
 passport.serializeUser(function(user, done) {
   done(null, user.id);
 });
-passport.deserializeUser(function(user, done) {
+passport.deserializeUser(function(id, done) {
   models.User.findOne({
-    where: {id:user.id}
+    where: {id:id}
   }).then(function(user) {
     return done(null, user);
   });
