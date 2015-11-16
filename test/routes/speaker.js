@@ -12,15 +12,19 @@ chai.use(chaiHttp);
 describe('speaker routes', function() {
 
   beforeEach(function(done){
-    models.Speaker.create({
-      first_name: 'Michael',
-      last_name: 'McBain',
-      email: 'michael@mcbain.com',
-      topic: 'Node for Life',
-      speaking_date: new Date(),
-      company: 'Galvanize'
+    models.Speaker.sync({
+      force: true
     }).then(function() {
-      done();
+      models.Speaker.create({
+        first_name: 'Michael',
+        last_name: 'McBain',
+        email: 'michael@mcbain.com',
+        topic: 'Node for Life',
+        speaking_date: new Date(),
+        company: 'Galvanize'
+      }).then(function() {
+        done();
+      });
     });
   });
 
