@@ -34,13 +34,16 @@ An app to allow students to rate and provide feedback on a guest speaker.
   - Mocks - [passport-stub](https://github.com/gtramontina/passport-stub)
 1. Part 7
   - Seed database
+1. Part 8
+  - view past speakers
+  - test
 
 ## User Stories
 
 1. A user can-
   - view past speakers
   - view upcoming speakers
-  - add feedback on on past speakers
+  - add feedback on past speakers
   - vote on *potential* upcoming topics
   - login/logout via Github
   - suggest speakers
@@ -103,3 +106,5 @@ export githubClientID=ADD_YOUR_ID
 export githubClientSecret=ADD_YOUR_SECRET
 export githubCallbackURL=http://127.0.0.1:3000/auth/github/callback
 ```
+
+Then run to activate - `source _env.sh`
