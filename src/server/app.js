@@ -10,6 +10,12 @@ var passport = require('passport');
 var session = require('express-session');
 var flash = require('connect-flash');
 
+// *** seed the database *** //
+if (process.env.NODE_ENV === 'development') {
+  var seedSpeakers = require('./models/seeds/speakers.js');
+  seedSpeakers();
+}
+
 
 // *** routes *** //
 var routes = require('./routes/index.js');

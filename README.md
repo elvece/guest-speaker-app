@@ -32,6 +32,8 @@ An app to allow students to rate and provide feedback on a guest speaker.
 1. Part 6
   - Add unit/ integration tests
   - Mocks - [passport-stub](https://github.com/gtramontina/passport-stub)
+1. Part 7
+  - Seed database
 
 ## User Stories
 
