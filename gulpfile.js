@@ -13,6 +13,7 @@ var minifyCSS = require('gulp-minify-css');
 var clean = require('gulp-clean');
 var concat = require('gulp-concat');
 var runSequence = require('run-sequence');
+var env = require('gulp-env');
 
 
 /**
@@ -125,14 +126,22 @@ gulp.task('connectDist', function (cb) {
   });
 });
 
+gulp.task('set-env', function () {
+  env({
+    vars: {
+      NODE_ENV: 'development'
+    }
+  });
+});
+
 
 // *** default task *** //
-gulp.task('default', ['browser-sync', 'watch'], function(){});
+gulp.task('default', ['set-env', 'browser-sync', 'watch'], function(){});
 
 // *** build task *** //
 gulp.task('build', function() {
   runSequence(
     ['clean'],
-    ['lint', 'minify-css', 'minify-js', 'copy-server-files', 'connectDist']
+    ['set-env', 'lint', 'minify-css', 'minify-js', 'copy-server-files', 'connectDist']
   );
 });
