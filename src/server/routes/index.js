@@ -7,7 +7,7 @@ var passport = require('../auth/github.js');
 
 router.get('/', function(req, res, next) {
   res.render('index', {
-    title: 'home',
+    title: 'Speakers',
     user: req.user,
     messages: res.locals.sessionFlash
   });
