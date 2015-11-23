@@ -1,0 +1,22 @@
+language: node_js
+node_js:
+- '5.0'
+- '4.1'
+- '4.0'
+- '0.12'
+- '0.11'
+before_script:
+- npm install -g mocha
+- npm install -g coveralls
+script: npm run cov
+after_script:
+- npm run send-coverage
+deploy:
+  provider: heroku
+  api_key:
+    secure: V+C+o7N9Dv9qT7yD8BkTiVbMt5GzNi8AKL1HqYDRUIsU6tgdvfX4Ev2cJCE/hJCzU9UqoFCkhZaKwV4BhZEVuCHnKcdJpgekW6/mPGaRhheKFjK3UHZz6ENVVCW7A3/9dNvF74KQjn6HG0j1NYEhTE2YuSSqHVQUIOld/4V1hPdduOS9wjfieJzPcTuBPRNQwfCe2+Xv09XQaM/X1oXndpALji6n0QxqU9cTU1ksKHbhtG8RBWgV1Q0iPbk/ObAoWMme7htatHpRTQa1WN2/WfQg+c70r/EfFNcT4CsCgPLoJc+VF3xqyjoCjraF0fOXlifpZ2pJwFqyaMBkKTV8FQ+Jokk1CrTOdaTnale73T5Xye/3PBJbmCPcEKZwRrXRGf9sjFH+NqqHVjCRdh6nyMa3tPiIQ6fy/S0SfV2Ojr/08Inj2M7hSJufIW+wuI+kVXxNDlT7IO9ozhKQrH8hhmeDC0zcQqcArMELKQdmJtwKjlaZv9xPXf0e9vi9zz05fTJ/p1qrE5KdC4q9ZT4IWoxeZwwhURnUJ9I8zCTyxKulpgMc1mOgbjPrytmm6J6YrVGXUPRpeds5207ev+jGcraP1mV0yGvZHHCISALTYRvhPzu8IRf33nkQffdNKJjK48EZ5NCCZjCKU54HHFo8lSftBtB2lIQUx5WZLUmrJz8=
+  app: guest-app
+  on:
+    repo: mjhea0/guest-speaker-app
+    branch: master
+    node: '4.1'
